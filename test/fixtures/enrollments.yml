@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  assignable: one
+  assignable_type: Assignable
+  educable: one
+  educable_type: Educable
+
+two:
+  assignable: two
+  assignable_type: Assignable
+  educable: two
+  educable_type: Educable

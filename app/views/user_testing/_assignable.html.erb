@@ -1,0 +1,12 @@
+<tr>
+  <td><%= assignable.name %></td>
+  <% if results.has_key?(assignable.id) %>
+      <td><%= results[assignable.id].success %></td>
+      <td><% if !results[assignable.id].success %>
+            <%= render 'pass', assignable: assignable %>
+        <% end %></td>
+  <% else %>
+      <td></td>
+      <td><%= render 'pass', assignable: assignable %></td>
+  <% end %>
+</tr>

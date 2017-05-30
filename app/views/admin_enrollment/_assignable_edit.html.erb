@@ -1,0 +1,9 @@
+<tr>
+  <td><%= assignable_edit.name %></td>
+  <td><%= link_to 'Unassign', destroy_admin_enrollment_path(
+      @educable,
+      educable_type: @educable_type,
+      assignable_id: assignable_edit.id,
+      assignable_type: assignable_edit.class), :method => :post %>
+  </td>
+</tr>

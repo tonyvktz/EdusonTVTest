@@ -1,0 +1,2 @@
+module AdminEnrollmentHelper
+end

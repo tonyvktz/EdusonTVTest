@@ -1,0 +1,13 @@
+<tr>
+  <td><%= assignable.name %></td>
+  <td><% if assigned.include?(assignable.id) %>
+        Assigned
+    <% else %>
+        <%= link_to 'Assign', create_admin_enrollment_path(
+            @educable,
+            educable_type: @educable.class,
+            assignable_id: assignable.id,
+            assignable_type: assignable.class), :method => :post %></td>
+    <% end %>
+    </td>
+</tr>

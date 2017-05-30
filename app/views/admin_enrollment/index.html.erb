@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users schedule</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Group</th>
+    <th colspan="4"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= (user.user_group ? user.user_group.name : '')%></td>
+        <%= render 'links', educable: user %>
+        <td><%= link_to 'To test ...', user_testing_path(user), target: '_blank' %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h1>Groups schedule</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @groups.each do |group| %>
+      <tr>
+        <td><%= group.name %></td>
+        <%= render 'links', educable: group %>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,39 @@
+<h1>Assign to <%= @educable_type %> <%= @educable.name %></h1>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Courses</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <%= render partial: 'assignable', collection: @courses, :locals => {:assigned => @assigned_courses } %>
+  </tbody>
+</table>
+
+
+<h1>Tests</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <%= render partial: 'assignable', collection: @course_tests, :locals => {:assigned => @assigned_tests } %>
+  </tbody>
+</table>
+
+
+<br>
+
+<%= link_to 'Back', admin_enrollment_path %>

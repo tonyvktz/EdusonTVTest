@@ -1,0 +1,37 @@
+<h1>Hello <%= @user.name %></h1>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Courses schedule</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>State</th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <%= render partial: 'assignable', collection: @courses, :locals => {:results => @courses_results } %>
+  </tbody>
+</table>
+
+
+<h1>Tests schedule</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>State</th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <%= render partial: 'assignable', collection: @course_tests, :locals => {:results => @tests_results } %>
+  </tbody>
+</table>
+
